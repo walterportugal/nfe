@@ -4,11 +4,12 @@ import com.fincatto.documentofiscal.DFUnidadeFederativa;
 import com.fincatto.documentofiscal.nfe.NFeConfig;
 import com.fincatto.documentofiscal.nfe400.FabricaDeObjetosFake;
 import com.fincatto.documentofiscal.nfe400.utils.NFGeraQRCode;
-import java.security.KeyStore;
-import java.security.NoSuchAlgorithmException;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.security.KeyStore;
+import java.security.NoSuchAlgorithmException;
 
 public class NFGeraQRCodeTest {
 
@@ -38,11 +39,11 @@ public class NFGeraQRCodeTest {
         final NFNota nota = FabricaDeObjetosFake.getNotaQRCode();
         nota.setInfoSuplementar(new NFNotaInfoSuplementar());
         nota.getInfoSuplementar().setQrCode(new NFGeraQRCode(nota, this.createConfigTest()).getQRCodev2());
-
+        
         final String urlEsperada = nota.getInfo().getIdentificacao().getUf().getQrCodeHomologacao() + NFGeraQRCodeTest.URL_TESTV2;
         Assert.assertEquals(urlEsperada, nota.getInfoSuplementar().getQrCode());
     }
-
+    
     @Test
     public void geraSHA1v2() throws Exception {
         final String entrada = "28140300156225000131650110000151341562040824|2|2|1SEU-CODIGO-CSC-CONTRIBUINTE-36-CARACTERES";
