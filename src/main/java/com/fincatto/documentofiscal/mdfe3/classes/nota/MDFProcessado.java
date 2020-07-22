@@ -3,12 +3,11 @@ package com.fincatto.documentofiscal.mdfe3.classes.nota;
 import com.fincatto.documentofiscal.DFBase;
 import com.fincatto.documentofiscal.mdfe3.classes.MDFProtocolo;
 import com.fincatto.documentofiscal.validadores.BigDecimalValidador;
+import java.math.BigDecimal;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
-
-import java.math.BigDecimal;
 
 @Root(name = "mdfeProc")
 @Namespace(reference = "http://www.portalfiscal.inf.br/mdfe")
@@ -24,7 +23,7 @@ public class MDFProcessado extends DFBase {
     @Element(name = "MDFe")
     private MDFe mdfe;
 
-    @Element(name = "protMDFe")
+    @Element(name = "protMDFe", required = false)
     private MDFProtocolo protocolo;
 
     public MDFe getMdfe() {

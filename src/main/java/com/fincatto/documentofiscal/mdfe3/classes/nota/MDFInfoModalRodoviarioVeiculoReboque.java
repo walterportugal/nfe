@@ -1,9 +1,10 @@
 package com.fincatto.documentofiscal.mdfe3.classes.nota;
 
-import org.simpleframework.xml.Element;
-
 import com.fincatto.documentofiscal.validadores.StringValidador;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Order;
 
+@Order(elements = { "cInt", "placa", "RENAVAM", "tara", "capKG", "capM3", "prop", "tpCar", "UF" })
 public class MDFInfoModalRodoviarioVeiculoReboque extends MDFInfoModalRodoviarioVeiculo {
     private static final long serialVersionUID = -2787982058485353668L;
     @Element(name = "capKG")
