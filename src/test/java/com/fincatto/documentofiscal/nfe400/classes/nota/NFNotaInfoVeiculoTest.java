@@ -1,10 +1,9 @@
 package com.fincatto.documentofiscal.nfe400.classes.nota;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.fincatto.documentofiscal.DFUnidadeFederativa;
 import com.fincatto.documentofiscal.nfe400.FabricaDeObjetosFake;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class NFNotaInfoVeiculoTest {
 
@@ -38,8 +37,8 @@ public class NFNotaInfoVeiculoTest {
         veiculo.toString();
     }
 
-    @Test(expected = IllegalStateException.class)
-    public void naoDevePermitirUFNulo() {
+    @Test
+    public void devePermitirUFNulo() {
         final NFNotaInfoVeiculo veiculo = new NFNotaInfoVeiculo();
         veiculo.setPlacaVeiculo("MKZ8159");
         veiculo.setRegistroNacionalTransportadorCarga("8Io5YKSKW1qy3v7zGwLx");
