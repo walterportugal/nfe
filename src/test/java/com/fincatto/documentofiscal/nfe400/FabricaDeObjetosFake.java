@@ -1087,10 +1087,7 @@ public class FabricaDeObjetosFake {
     public static NFNotaInfoItemImpostoICMS53 getNFNotaInfoItemImpostoICMS53() {
         final NFNotaInfoItemImpostoICMS53 icms53 = new NFNotaInfoItemImpostoICMS53();
         icms53.setOrigem(NFOrigem.NACIONAL);
-        icms53.setPercentualAliquota(new BigDecimal("99.99"));
         icms53.setSituacaoTributaria(NFNotaInfoImpostoTributacaoICMS.TRIBUTACAO_MONOFASICA_SOBRE_COMBUSTIVEIS_COM_RECOLHIMENTO_DIFERIDO);
-        icms53.setQuantidadeBaseCalculo(new BigDecimal("999999999999.99"));
-        icms53.setValorTributo(new BigDecimal("999999999999.99"));
         return icms53;
     }
 
@@ -1339,6 +1336,7 @@ public class FabricaDeObjetosFake {
         final NFNotaInfoProcessoReferenciado processoReferenciado = new NFNotaInfoProcessoReferenciado();
         processoReferenciado.setIdentificadorProcessoOuAtoConcessorio("SziSRSIRZvYWlxcbmmJfRZsLgVHaHTurUL9ea1kwFe7fssrxTVSK6uaFwGO5");
         processoReferenciado.setIndicadorOrigemProcesso(NFOrigemProcesso.JUSTICA_FEDERAL);
+        processoReferenciado.setTipoAtoConcessorio(NFTipoAtoConcessorio.REGIME_ESPECIAL);
         return processoReferenciado;
     }
     

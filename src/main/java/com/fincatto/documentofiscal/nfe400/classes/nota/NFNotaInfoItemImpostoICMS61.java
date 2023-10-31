@@ -17,7 +17,7 @@ public class NFNotaInfoItemImpostoICMS61 extends DFBase {
     @Element(name = "CST")
     private NFNotaInfoImpostoTributacaoICMS situacaoTributaria;
 
-    @Element(name = "qBCMonoRet")
+    @Element(name = "qBCMonoRet", required = false)
     private String quantidadeBaseCalculo;
 
     @Element(name = "adRemICMSRet")
@@ -46,7 +46,7 @@ public class NFNotaInfoItemImpostoICMS61 extends DFBase {
     }
 
     public void setValorTributo(final BigDecimal valorTributo) {
-        this.valorTributo = DFBigDecimalValidador.tamanho15Com2CasasDecimais(valorTributo, "Valor do ICMS retido anteriormente");
+        this.valorTributo = DFBigDecimalValidador.tamanho15Com2CasasDecimais(valorTributo, "ICMS retido anteriormente");
     }
 
     public NFOrigem getOrigem() {
