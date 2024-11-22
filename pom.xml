@@ -3,7 +3,7 @@
     <groupId>com.github.wmixvideo</groupId>
     <artifactId>nfe</artifactId>
     <packaging>jar</packaging>
-    <version>4.0.57.softland-SNAPSHOT</version>
+    <version>4.0.76.softland-SNAPSHOT</version>
     <name>nfe</name>
     <description>Biblioteca de comunicacao de nota fiscal eletronica brasileira</description>
     <url>https://github.com/wmixvideo/nfe</url>
@@ -205,10 +205,6 @@
                     <repoToken>QTRbpWiuiwIHGrc0arqKxXsAtiVoLMc5h</repoToken>
                 </configuration>
                 <dependencies>
-                    <!--
-                    Explicit dep on jaxb-api to avoid problems with JDK9 and later, until a new version of coveralls-maven-plugin is released.
-                    See also https://github.com/trautonen/coveralls-maven-plugin/issues/112
-                    -->
                     <dependency>
                         <groupId>javax.xml.bind</groupId>
                         <artifactId>jaxb-api</artifactId>
@@ -249,7 +245,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <nexusUrl>https://oss.sonatype.org</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
@@ -284,6 +280,14 @@
                             <tagNameFormat>v@{project.version}</tagNameFormat>
                             <remoteTagging>false</remoteTagging>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>default</id>
+                                <goals>
+                                    <goal>perform</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
