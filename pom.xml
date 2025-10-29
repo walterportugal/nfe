@@ -206,7 +206,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.14</version>
@@ -223,7 +223,7 @@
                         <exclude>**/webservices/**/*</exclude>
                     </excludes>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
