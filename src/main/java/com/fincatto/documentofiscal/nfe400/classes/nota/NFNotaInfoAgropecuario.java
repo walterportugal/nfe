@@ -2,10 +2,9 @@ package com.fincatto.documentofiscal.nfe400.classes.nota;
 
 
 import com.fincatto.documentofiscal.DFBase;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
-
 import java.util.List;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 
 /**
  * Informações de produtos da agricultura, pecuária e
@@ -13,10 +12,9 @@ import java.util.List;
  *
  * @author Fagner Couto
  */
-@Root(name = "agropecuario")
 public class NFNotaInfoAgropecuario extends DFBase {
 
-    @Element(name = "defensivo", required = false)
+    @ElementList(entry = "defensivo", inline = true, required = false)
     private List<NFNotaInfoAgropecuarioDefensivo> defensivos;
 
     @Element(name = "guiaTransito", required = false)

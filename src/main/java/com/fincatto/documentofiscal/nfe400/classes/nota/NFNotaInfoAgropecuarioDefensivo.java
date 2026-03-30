@@ -4,14 +4,12 @@ package com.fincatto.documentofiscal.nfe400.classes.nota;
 import com.fincatto.documentofiscal.DFBase;
 import com.fincatto.documentofiscal.validadores.DFStringValidador;
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 /**
  * Defensivos Agrícolas
  *
  * @author Fagner Couto
  */
-@Root(name = "agropecuario")
 public class NFNotaInfoAgropecuarioDefensivo extends DFBase {
 
     @Element(name = "nReceituario")
