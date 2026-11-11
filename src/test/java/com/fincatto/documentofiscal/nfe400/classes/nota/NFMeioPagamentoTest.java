@@ -19,7 +19,7 @@ public class NFMeioPagamentoTest {
         Assertions.assertEquals(NFMeioPagamento.DUPLICATA_MERCANTIL, NFMeioPagamento.valueOfCodigo("14"));
         Assertions.assertEquals(NFMeioPagamento.BOLETO_BANCARIO, NFMeioPagamento.valueOfCodigo("15"));
         Assertions.assertEquals(NFMeioPagamento.DEPOSITO_BANCARIO, NFMeioPagamento.valueOfCodigo("16"));
-        Assertions.assertEquals(NFMeioPagamento.PIX_DINAMICO, NFMeioPagamento.valueOfCodigo("17"));
+        Assertions.assertEquals(NFMeioPagamento.PIX, NFMeioPagamento.valueOfCodigo("17"));
         Assertions.assertEquals(NFMeioPagamento.TRANSFERENCIA_BANCARIA, NFMeioPagamento.valueOfCodigo("18"));
         Assertions.assertEquals(NFMeioPagamento.FIDELIDADE_CASHBACK, NFMeioPagamento.valueOfCodigo("19"));        
         Assertions.assertEquals(NFMeioPagamento.PIX_ESTATICO, NFMeioPagamento.valueOfCodigo("20"));        
@@ -46,7 +46,7 @@ public class NFMeioPagamentoTest {
         Assertions.assertEquals("14", NFMeioPagamento.DUPLICATA_MERCANTIL.getCodigo());
         Assertions.assertEquals("15", NFMeioPagamento.BOLETO_BANCARIO.getCodigo());
         Assertions.assertEquals("16", NFMeioPagamento.DEPOSITO_BANCARIO.getCodigo());
-        Assertions.assertEquals("17", NFMeioPagamento.PIX_DINAMICO.getCodigo());
+        Assertions.assertEquals("17", NFMeioPagamento.PIX.getCodigo());
         Assertions.assertEquals("18", NFMeioPagamento.TRANSFERENCIA_BANCARIA.getCodigo());
         Assertions.assertEquals("19", NFMeioPagamento.FIDELIDADE_CASHBACK.getCodigo());        
         Assertions.assertEquals("20", NFMeioPagamento.PIX_ESTATICO.getCodigo());        
@@ -73,7 +73,7 @@ public class NFMeioPagamentoTest {
         Assertions.assertEquals("14 - Duplicata Mercantil", NFMeioPagamento.DUPLICATA_MERCANTIL.toString());
         Assertions.assertEquals("15 - Boleto Bancário", NFMeioPagamento.BOLETO_BANCARIO.toString());
         Assertions.assertEquals("16 - Depósito Bancário", NFMeioPagamento.DEPOSITO_BANCARIO.toString());
-        Assertions.assertEquals("17 - Pagamento Instantâneo (PIX) - Dinâmico", NFMeioPagamento.PIX_DINAMICO.toString());
+        Assertions.assertEquals("17 - Pagamento Instantâneo (PIX) - Dinâmico", NFMeioPagamento.PIX.toString());
         Assertions.assertEquals("18 - Transferência Bancária", NFMeioPagamento.TRANSFERENCIA_BANCARIA.toString());
         Assertions.assertEquals("19 - Programa de fidelidade (Cashback)", NFMeioPagamento.FIDELIDADE_CASHBACK.toString());        
         Assertions.assertEquals("20 - Pagamento Instantâneo (PIX) - Estático", NFMeioPagamento.PIX_ESTATICO.toString());        

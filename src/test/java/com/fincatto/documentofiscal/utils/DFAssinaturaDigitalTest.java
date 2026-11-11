@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.InputStream;
+import java.nio.file.Files;
 
 
 public class DFAssinaturaDigitalTest {

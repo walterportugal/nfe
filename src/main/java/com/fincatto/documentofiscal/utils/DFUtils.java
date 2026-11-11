@@ -1,5 +1,8 @@
 package com.fincatto.documentofiscal.utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -106,5 +109,23 @@ public abstract class DFUtils {
      */
     public static boolean isNumerico(final String str) {
         return str != null && SOMENTE_NUMEROS.matcher(str).matches();
+    }
+
+    /**
+     * Le todos os bytes restantes do stream (equivalente ao InputStream.readAllBytes() do Java 9+, compativel com Java 8).<br>
+     * Nao fecha o stream.
+     *
+     * @param in Stream de entrada.
+     * @return Bytes lidos.
+     * @throws IOException Em caso de erro de leitura.
+     */
+    public static byte[] lerTodosBytes(final InputStream in) throws IOException {
+        final ByteArrayOutputStream out = new ByteArrayOutputStream();
+        final byte[] buffer = new byte[8192];
+        int lidos;
+        while ((lidos = in.read(buffer)) != -1) {
+            out.write(buffer, 0, lidos);
+        }
+        return out.toByteArray();
     }
 }
